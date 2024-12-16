@@ -1,0 +1,32 @@
+/* Toast mesajı için stil */
+.toast {
+    position: fixed;
+    background-color: #0a5b0d;
+    font-weight: bold;
+    bottom: 20px;               /* Sağ alt köşeye yerleştir */
+    right: 20px;
+    color: rgb(0, 0, 0);               /* Beyaz yazı */
+    padding: 15px 30px;
+    border-radius: 8px;
+    z-index: 9999;              /* Yüksek z-index */
+    font-size: 16px;
+    display: none;              /* Başlangıçta görünmez */
+    opacity: 0;        
+    border: 3 px solid black;         /* Şeffaflık sıfır */
+    transition: opacity 0.5s ease;  /* Opacity geçişi */
+}
+
+/* Toast mesajı görünürken */
+.toast.show {
+    display: block;   /* Görünür yap */
+    opacity: 1;       /* Şeffaflığı tam yap */
+}
+
+
+tr {
+    transition: opacity 0.5s ease-out;  /* Opaklık geçişi */
+}
+
+tr.fadeOut {
+    opacity: 0;  /* Opaklık sıfır olana kadar geçiş yapar */
+}

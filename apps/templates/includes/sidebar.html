@@ -1,0 +1,92 @@
+<aside class="left-sidebar" data-sidebarbg="skin6">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <!-- User Profile-->
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/"
+                        aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                            class="hide-menu">Dashboard</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/upload.html" aria-expanded="false"><i class="mdi me-2 mdi-android"></i><span
+                            class="hide-menu">APK Upload</span></a>
+                </li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/information.html" aria-expanded="false"><i class="mdi me-2 mdi-information"></i><span
+                            class="hide-menu">Information</span></a>
+                </li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/manifest-analysis.html" aria-expanded="false"><i class="mdi me-2 mdi-receipt"></i><span
+                            class="hide-menu">Manifest Analysis</span></a>
+                </li>
+
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/secrets-scan.html" aria-expanded="false">
+                        <i class="mdi me-2 mdi-barcode-scan"></i><span class="hide-menu">Secrets Scan</span></a>
+                </li>
+
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/source-code-scan.html" aria-expanded="false">
+                        <i class="mdi me-2 mdi-code-tags-check"></i><span class="hide-menu">Source Code Scan</span></a>
+                </li>
+
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/scans.html" aria-expanded="false">
+                        <i class="mdi me-2 mdi-playlist-check"></i><span class="hide-menu">Scans</span></a>
+                </li>
+
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/settings.html" aria-expanded="false">
+                        <i class="mdi me-2 mdi-settings"></i><span class="hide-menu">Settings</span></a>
+                </li>
+
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/reports.html" aria-expanded="false">
+                        <i class="mdi me-2 mdi-file-pdf"></i><span class="hide-menu">Reports</span></a>
+                </li>
+                <!--
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/table-basic.html" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span
+                            class="hide-menu">Table</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/icon-material.html" aria-expanded="false"><i class="mdi me-2 mdi-emoticon"></i><span
+                            class="hide-menu">Icon</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/map-google.html" aria-expanded="false"><i class="mdi me-2 mdi-earth"></i><span
+                            class="hide-menu">Google Map</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/page-blank.html" aria-expanded="false"><i
+                            class="mdi me-2 mdi-book-open-variant"></i><span class="hide-menu">Blank</span></a>
+                </li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/page-404.html" aria-expanded="false"><i class="mdi me-2 mdi-help-circle"></i><span
+                            class="hide-menu">Error 404</span></a>
+                </li>
+-->
+            </ul>
+
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+    <div class="sidebar-footer">
+        <div class="row">
+            <div class="col-4 link-wrap">
+                <!-- item-->
+                <a href="/page-profile.html" class="link" data-toggle="tooltip" title="" data-original-title="Settings">
+                    <i class="ti-settings"></i></a>
+            </div>
+            <div class="col-4 link-wrap">
+                <!-- item-->
+                <a href="https://appseed.us/support/" target="_blank" class="link" data-toggle="tooltip" title=""
+                    data-original-title="Email"><i class="mdi mdi-gmail"></i></a>
+            </div>
+            <div class="col-4 link-wrap">
+                <!-- item-->
+                <a href="{{ url_for('authentication_blueprint.logout') }}" class="link" data-toggle="tooltip" title=""
+                    data-original-title="Logout"><i class="mdi mdi-power"></i></a>
+            </div>
+        </div>
+    </div>
+</aside>

@@ -1,0 +1,104 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Page Blank {% endblock %}
+
+<!-- Specific Page CSS goes HERE  --><script src=""></script>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/css/toast.css">
+{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="page-breadcrumb">
+    <div class="row align-items-center">
+        <div class="col-md-6 col-8 align-self-center">
+            <h3 class="page-title mb-0 p-0">Finished Scans</h3>
+            <div class="d-flex align-items-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Finished Scans</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div id="toast" class="toast" style="display:none;">Scan başarıyla silindi!</div>
+        <div class="col-md-6 col-4 align-self-center">
+             <!--
+            <div class="text-end upgrade-btn">
+                <a href="https://appseed.us/support/" class="btn btn-danger d-none d-md-inline-block text-white"
+                    target="_blank">
+                    Support
+                </a>
+            </div>
+        -->
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table user-table">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">APK Name</th>
+                                    <th class="border-top-0">Scan Date</th>
+                                    <th class="border-top-0">Vulnerabities</th>
+                                    <th class="border-top-0">Actions</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for apk in apks %}
+                                <tr id="apk-{{ apk.apk_id }}">
+                                    <td>{{ apk.apk_name }}</td>
+                                    <td>{{ apk.date_created }}</td>
+                                    <td>8 Vulnerabilities Found</td>
+                                    <td><a href="#" id="result" class="btn btn-info d-none d-md-inline-block text-white" data-apk-id="{{ apk.apk_id }}"> Results </a> <span></span>
+                                    <a href="#" id="deleteScan" class="deleteScan btn btn-danger d-none d-md-inline-block text-white" data-apk-id="{{ apk.apk_id }}"> Delete </a></td>
+                                    <td></td>
+                                </tr>
+
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Right sidebar -->
+    <!-- ============================================================== -->
+    <!-- .right-sidebar -->
+    <!-- ============================================================== -->
+    <!-- End Right sidebar -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+
+{% endblock content %}
+
+{% block javascripts %}
+<script src="{{ config.ASSETS_ROOT }}/js/toast.js"></script>
+{% endblock javascripts %}
