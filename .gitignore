@@ -1,17 +1,12 @@
-# Sanal ortam dizini
 myenv/
 
-# Pycache dosyaları
 __pycache__/
 *.pyc
 
-# Çıktı ve log dosyaları
 *.log
 
-# Ortam değişkenleri dosyası
 .env
 
-# IDE yapılandırma dosyaları
 .vscode/
 .idea/
 
